@@ -10,16 +10,10 @@ app.use(cookie_parser())
 app.use(express.static("public"))
 app.use(json)
 
-app.get("/", function (req, res) {
-  res.send("Hello")
-})
+//import routes
+import router from "./routes/user.js"
 
-app.post("/", function (req, res) {
-  res.send("Hello")
-})
-
-app.put("/", function (req, res) {
-  res.send("Hello")
-})
+//routes declaration
+app.use("/users", userRouter)
 
 export default app
