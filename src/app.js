@@ -11,7 +11,7 @@ app.use(express.static("public"))
 app.use(json)
 
 //import routes
-import router from "./routes/user.js"
+import userRouter from "./routes/user.js"
 
 //routes declaration
 app.use("/users", userRouter)
